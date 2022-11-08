@@ -2,7 +2,9 @@ import React from 'react'
 
 function Search() {
   return (
-    <div>Search</div>
+    <form>
+      <input id='placeholder'  type='text' placeholder='Search for country...'/>
+    </form>
   )
 }
 

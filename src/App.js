@@ -1,11 +1,20 @@
-//import Search from './components/Search';
+//import React, {useState} from 'react';
+
+//components
+import Footer from './components/Footer';
+import Search from './components/Search';
+import Table from './components/Table';
 import './index.css'
 
 
 function App() {
+     
+
   return (
     <div className="App">
-       <h1>Search</h1>
+       <Footer />
+       <Search />
+       <Table />
     </div>
   );
 }
