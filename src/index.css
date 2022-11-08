@@ -1,1 +1,27 @@
+*{
+  box-sizing: border-box;
+}
 
+body{
+  font-family: sans-serif;
+}
+
+.input{
+  color: purple;
+  font-size: 2rem;
+  text-transform: lowercase;
+  margin-left: 60%;
+  margin-bottom: 40%;
+}
+
+h1{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  color: blueviolet;
+}
+
+hr{
+  border-top: 5px solid rgb(144, 94, 144);
+  border-radius: 5px;
+}
