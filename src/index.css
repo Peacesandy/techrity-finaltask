@@ -4,24 +4,54 @@
 
 body{
   font-family: sans-serif;
+  background-color: rgb(218, 216, 216);
 }
 
 .input{
-  color: purple;
+  color: rgb(0, 100, 128);
   font-size: 2rem;
   text-transform: lowercase;
   margin-left: 60%;
-  margin-bottom: 40%;
+
 }
 
 h1{
   display: flex;
   text-align: center;
   justify-content: center;
-  color: blueviolet;
+  color: #02382d;
 }
 
 hr{
-  border-top: 5px solid rgb(144, 94, 144);
+  border-top: 5px solid #009578;
   border-radius: 5px;
+}
+
+.table{
+  box-shadow: 0 0 rgba(0, 0, 0, 0.1);
+  border-collapse: collapse;
+  font-family: sans-serif;
+  overflow: hidden;
+  padding-top: 3%;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+}
+
+.table thead th{
+  background: #009578;
+  color: #ffff;
+}
+
+.table td,
+.table th {
+  padding: 20px 30px;
+}
+
+.table tbody tr:nth-of-type(even){
+  background: #eee;
+}
+
+.table tbody tr:last-of-type{
+  border-bottom: 2px solid #009578;
 }
