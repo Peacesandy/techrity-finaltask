@@ -1,7 +1,19 @@
 import React from 'react'
 
 function Table({countries}) {
-console.log(countries)
+  
+  const renderCountries = () => {
+    const countryItems = countries && countries.map((country, id) => { 
+    <tr>
+      <td>{id}</td>
+      <td>{country.name}</td>
+      <td>{country.capital}</td>
+      <td>{country.population}</td>
+      <td>{country?.currencies?.[0]?.symbol}</td>
+      <td><img src={country.flag} alt="country-flag" srcset="" /></td>
+    </tr>} )
+      return countryItems
+  }
   return (
     <table className='table'>
         <thead>
@@ -15,12 +27,7 @@ console.log(countries)
         </tr>
         </thead>
         <tbody>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
+        { countries.length > 0 && renderCountries()}
         </tbody>
     </table>
       

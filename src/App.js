@@ -29,16 +29,14 @@ function App() {
       )
      }, [])
 
-     if(error) {
-       return<>{error.message}</>
-     }else if (!isLoaded){
-      return<>loading...</>
-     }else
+     
   return (
     <div className="App">
        <Header />
        <Search />
-       <Table countries={items} />
+       {error && error.message}
+       {!isLoaded ? <>Loading...</> : <Table countries={items} />}
+      
        <Footer />
     </div>
   );
