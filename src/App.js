@@ -16,7 +16,7 @@ function App() {
      const [toBeFiltered, setToBeFiltered] = useState ([])
 
      const handleSearch = (query) => {
-      if (query != '') {
+      if (query !== '') {
         const filteredItems = toBeFiltered.filter((country) => (country.name.toLowerCase().includes(query.toLowerCase())))
         setItems(filteredItems)
       }
