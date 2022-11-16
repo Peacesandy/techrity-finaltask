@@ -12,6 +12,6 @@ function Search({filter}) {
       (e.target.value)} />
     </form>
   )
-      }
+}
 
 export default Search
