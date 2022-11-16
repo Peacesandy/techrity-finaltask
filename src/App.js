@@ -42,10 +42,13 @@ function App() {
   return (
     <div className="App">
        <Header />
-       {!isLoaded ? <>Loading...</> : <Search filter={handleSearch} />}
 
        {error && error.message}
-       {!isLoaded ? <>Loading...</> : <Table countries={items} />}
+       {!isLoaded ? <div className='loading'>Loading...</div> : (
+        <>
+          <Search filter={handleSearch} />
+          <Table countries={items} /> 
+        </>) }
       
        <Footer />
     </div>

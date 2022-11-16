@@ -6,7 +6,7 @@ function Table({countries}) {
     const countryItems = countries && countries.map((country, id) => {
       const tr =  
     <tr key={id}>
-      <td>{id}</td>
+      <td>{id+1}</td>
       <td>{country.name}</td>
       <td>{country.capital}</td>
       <td>{country.population}</td>
@@ -17,7 +17,7 @@ function Table({countries}) {
   } )
       return countryItems
   }
-  console.log(renderCountries())
+  
   return (
     <table className='table'>
         <thead>
