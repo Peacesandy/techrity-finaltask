@@ -13,6 +13,14 @@ function App() {
     const [error,setError] = useState(null)
      const [isLoaded, setIsLoaded] = useState(false)
      const [items, setItems] = useState([])
+     const [toBeFiltered, setToBeFiltered] = useState ([])
+
+     const handleSearch = (query) => {
+      if (query != '') {
+        const filteredItems = toBeFiltered.filter((country) => (country.name.toLowerCase().includes(query.toLowerCase())))
+        setItems(filteredItems)
+      }
+     }
 
      useEffect(() =>{
      fetch("https://restcountries.com/v2/all")
@@ -21,6 +29,7 @@ function App() {
        (result) => {
          setIsLoaded(true)
           setItems(result)
+          setToBeFiltered(result)
         },
         (error) =>{
          setIsLoaded(true)
@@ -33,7 +42,8 @@ function App() {
   return (
     <div className="App">
        <Header />
-       <Search />
+       {!isLoaded ? <>Loading...</> : <Search filter={handleSearch} />}
+
        {error && error.message}
        {!isLoaded ? <>Loading...</> : <Table countries={items} />}
       
